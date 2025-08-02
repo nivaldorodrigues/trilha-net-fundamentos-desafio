@@ -1,38 +1,41 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# Sistema de Estacionamento - Trilha .NET Fundamentos
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+Este projeto é um sistema simples de estacionamento desenvolvido como desafio da trilha de Fundamentos do .NET. O objetivo é praticar conceitos básicos de C#, como classes, métodos, listas, entrada e saída de dados, além de lógica de programação.
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+## Funcionalidades
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+- Cadastro de veículos (placa)
+- Remoção de veículos com cálculo de valor a pagar
+- Listagem de veículos estacionados
+- Menu interativo no console
 
-A classe contém três variáveis, sendo:
+## Alterações Recentes
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+- Implementação completa dos métodos `AdicionarVeiculo`, `RemoverVeiculo` e `ListarVeiculos` na classe `Estacionamento`.
+- Correção do fluxo de entrada de dados para evitar erros e melhorar a experiência do usuário.
+- Tratamento de exceções e validações para evitar falhas na execução.
+- Comentário da linha `Console.Clear()` no menu principal para evitar exceções em ambientes sem console.
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+## Como Executar
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+1. Clone este repositório:
+   ```
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+2. Acesse a pasta do projeto:
+   ```
+   cd trilha-net-fundamentos-desafio/DesafioFundamentos
+   ```
+3. Compile e execute:
+   ```
+   dotnet run
+   ```
 
-A classe contém três métodos, sendo:
+## Observações
+- O projeto foi desenvolvido para rodar no terminal/console.
+- Caso execute em ambientes como VS Code, a tela não será limpa devido à limitação do ambiente.
+- O código está comentado para facilitar o entendimento.
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+---
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
-
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
-
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
-
-
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+Desafio prático da trilha .NET da DIO.
